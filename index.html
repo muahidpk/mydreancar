@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muahid Nisar | AI Developer & YouTuber</title>
+
+    <meta name="description" content="Welcome to the official website of Muahid Nisar, a young Artificial Intelligence developer, student, and YouTuber.">
+    <meta name="theme-color" content="#080b16">
+
+    <style>
+        /* ===== BASIC SETTINGS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #080b16;
+            --card: #111629;
+            --text: #f4f7ff;
+            --muted: #a5aec5;
+            --blue: #60a5fa;
+            --purple: #a78bfa;
+            --border: rgba(255, 255, 255, 0.09);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(28px, 4vw, 38px);
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        /* ===== NAVIGATION ===== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 11, 22, 0.88);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--muted);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: white;
+            font-size: 23px;
+            padding: 5px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            padding: 90px 0;
+            background:
+                radial-gradient(ellipse at 75% 25%,
+                rgba(124, 58, 237, 0.15), transparent 40%),
+                radial-gradient(ellipse at 15% 80%,
+                rgba(37, 99, 235, 0.12), transparent 40%);
+        }
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: #93c5fd;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            background: rgba(96, 165, 250, 0.08);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 72px);
+            line-height: 1.12;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+        }
+
+        .hero h2 {
+            font-size: clamp(19px, 3vw, 25px);
+            font-weight: 500;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 700;
+            border: 1px solid var(--border);
+            transition: transform 0.25s, background 0.25s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(100deg, #3b82f6, #8b5cf6);
+            border: none;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(96, 165, 250, 0.4);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .card-icon {
+            font-size: 29px;
+            margin-bottom: 15px;
+        }
+
+        /* ===== SKILLS SECTION ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 25px 20px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 17px;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            color: #bfdbfe;
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.14);
+        }
+
+        /* ===== PROJECTS SECTION ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .project-label {
+            color: var(--purple);
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-card h3 {
+            margin: 12px 0;
+            font-size: 21px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            color: var(--blue);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* ===== YOUTUBE SECTION ===== */
+        .youtube-box {
+            text-align: center;
+            padding: 50px 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            background:
+                radial-gradient(ellipse at top,
+                rgba(124, 58, 237, 0.16), transparent 70%),
+                var(--card);
+        }
+
+        .youtube-icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .youtube-box h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .youtube-box p {
+            color: var(--muted);
+            max-width: 580px;
+            margin: 0 auto 25px;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-box {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-box p {
+            color: var(--muted);
+            margin: 15px 0 25px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 28px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--blue);
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 760px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 5%;
+                background: #0c1020;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px 0;
+            }
+
+            .about-grid,
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 85px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .card {
+                padding: 23px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header>
+        <nav class="container">
+            <a class="logo" href="#home">Muahid<span>.</span></a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#youtube">YouTube</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===== HOME ===== -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        ✨ Student • Creator • Technology Enthusiast
+                    </span>
+
+                    <h1>
+                        Hi, I'm <span class="gradient-text">Muahid Nisar.</span>
+                    </h1>
+
+                    <h2>
+                        Young AI Developer & YouTuber
+                    </h2>
+
+                    <p>
+                        I'm a Class 6 student passionate about Artificial
+                        Intelligence, technology, and creating digital content.
+                        I love learning new things, building creative projects,
+                        and sharing my knowledge with the world.
+                    </p>
+
+                    <div class="buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Projects →
+                        </a>
+
+                        <a href="#about" class="btn btn-secondary">
+                            More About Me
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>About <span class="gradient-text">Me</span></h2>
+                    <p>A little introduction to who I am.</p>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="card">
+                        <div class="card-icon">🎓</div>
+                        <h3>My Education</h3>
+                        <p>
+                            I'm currently studying in Class 6. Alongside my
+                            school education, I'm exploring technology,
+                            learning programming, and discovering how
+                            Artificial Intelligence works.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🤖</div>
+                        <h3>My Passion</h3>
+                        <p>
+                            I'm interested in AI, coding, and digital
+                            innovation. My goal is to keep improving my
+                            skills, create useful projects, and use
+                            technology to solve problems.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🎬</div>
+                        <h3>Content Creation</h3>
+                        <p>
+                            As a YouTuber, I want to create interesting
+                            content, explore new ideas, and share my
+                            technology journey with viewers.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🚀</div>
+                        <h3>My Vision</h3>
+                        <p>
+                            I want to grow as a developer, build amazing
+                            things with AI, and inspire other young learners
+                            to explore coding and technology.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section class="section" id="skills">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>My <span class="gradient-text">Skills & Interests</span></h2>
+                    <p>Technologies and topics I'm exploring.</p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <h3>🤖 Artificial Intelligence</h3>
+                        <p>
+                            Exploring AI tools, machine learning concepts,
+                            and how intelligent applications are built.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">AI Tools</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Prompt Engineering</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>💻 Web Development</h3>
+                        <p>
+                            Learning how to create websites and turn ideas
+                            into useful digital experiences.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>🎥 YouTube & Creativity</h3>
+                        <p>
+                            Developing content ideas and exploring ways
+                            to communicate, teach, and entertain online.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">Content Creation</span>
+                            <span class="tag">Creativity</span>
+                            <span class="tag">Learning</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section class="section" id="projects">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>My <span class="gradient-text">Projects</span></h2>
+                    <p>Ideas I'm building and skills I'm developing.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <div class="card project-card">
+                        <span class="project-label">Project 01</span>
+                        <h3>Personal Portfolio Website</h3>
+                        <p>
+                            My own website to introduce myself, showcase
+                            my interests, and share my learning journey
+                            in technology.
+                        </p>
+                        <a class="project-link" href="#home">
+                            You're viewing it →
+                        </a>
+                    </div>
+
+                    <div class="card project-card">
+                        <span class="project-label">Project 02</span>
+                        <h3>AI Experiments</h3>
+                        <p>
+                            A space for exploring AI tools, experimenting
+                            with new ideas, and learning how AI can help
+                            people in everyday life.
+                        </p>
+                        <a class="project-link"
+                           href="#contact"
+                           aria-label="Contact me about AI experiments">
+                            Let's connect →
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== YOUTUBE ===== -->
+        <section class="section" id="youtube">
+            <div class="container">
+
+                <div class="youtube-box">
+                    <div class="youtube-icon" aria-hidden="true">▶️</div>
+
+                    <h3>My YouTube Journey</h3>
+
+                    <p>
+                        Welcome to my creative world! I'm working on
+                        sharing content, exploring technology, and
+                        learning something new with every step.
+                        Join me on my journey.
+                    </p>
+
+                    <!-- Replace YOUR_CHANNEL_ID with your YouTube channel URL -->
+                    <a
+                        class="btn btn-primary"
+                        href="https://www.youtube.com/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Visit My YouTube Channel →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section" id="contact">
+            <div class="container">
+
+                <div class="contact-box">
+                    <div class="section-heading">
+                        <h2>Let's <span class="gradient-text">Connect</span></h2>
+                        <p>Interested in technology, AI, or creative projects?</p>
+                    </div>
+
+                    <p>
+                        I'm always excited to learn, explore new ideas,
+                        and improve my skills. Check out my work and
+                        follow my journey as I continue growing.
+                    </p>
+
+                    <div class="buttons" style="justify-content: center;">
+                        <!-- Replace the URL below with your actual GitHub profile -->
+                        <a
+                            class="btn btn-secondary"
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub Profile ↗
+                        </a>
+
+                        <!-- Replace the URL below with your actual YouTube channel -->
+                        <a
+                            class="btn btn-primary"
+                            href="https://www.youtube.com/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            YouTube Channel ↗
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>
+                © <span id="year"></span> Muahid Nisar.
+                Built with curiosity and code.
+            </p>
+            <p style="margin-top: 6px;">
+                Keep learning. Keep building. Keep dreaming. 🚀
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Automatically update the copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Mobile navigation menu
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        // Close the mobile menu after clicking a navigation link
+        navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                menuToggle.textContent = "☰";
+            });
+        });
+    </script>
+
+</body>
+</html>
